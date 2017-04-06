@@ -1,0 +1,29 @@
+@import "base.scss";
+@import "reset.scss";
+body{
+    background-color: #999;
+}
+.loading{
+    @include flt;
+    z-index: 99999;
+    background-color: rgba(43,0,0,0.95);
+
+    span{
+        @include am(109px,108px);
+        @include font(15px,34px,#fff);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        // animation: loadingAni 0.6s steps(8) infinite;
+        // @keyframes loadingAni{
+        //     100%{ background-position: -872px; }
+        // }
+    }
+}
+.wrapper{
+    @include r;
+    z-index: 1;
+}
+@media screen and (max-width: 1400px) {
+    
+}
