@@ -4,7 +4,12 @@ const store = new Vuex.Store({
   },
   mutations: {
     changeLoading (state) {
-      state.loadingShow = false;
+      state.loadingShow = false
+    }
+  },
+  actions: {
+    changeLoading ({ commit }) {
+      commit('changeLoading')
     }
   }
 })
