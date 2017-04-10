@@ -2,11 +2,17 @@ const store = new Vuex.Store({
   state: {
     loadingShow: true
   },
+
   mutations: {
     changeLoading (state) {
       state.loadingShow = false
     }
   },
+
+  getters: {
+
+  },
+
   actions: {
     changeLoading ({ commit }) {
       commit('changeLoading')
@@ -15,24 +21,3 @@ const store = new Vuex.Store({
 })
 
 module.exports = store;
-
-//scars ------------
-// Vue.use(Vuex);
-
-// export default new Vuex.Store({
-//   state: {
-
-//   },
-
-//   mutations: {
-//     setState: (state, newState) => Object.assign(state, newState),
-//   },
-
-//   getters: {
-
-//   },
-
-//   actions: {
-
-//   },
-// });

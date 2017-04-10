@@ -24,7 +24,7 @@ let pluginsArray = [
   }),
   extractStyles,
   extractHtml,
-  new webpack.HotModuleReplacementPlugin(),
+  new webpack.HotModuleReplacementPlugin()
 ];
 
 if(process.env.bulidMode === 'production') {
@@ -58,7 +58,7 @@ let config = {
                 { loader: "sass-loader?sourceMap" }
               ]
             }),
-						es6:'babel-loader?presets=es2015'
+						// es6:'babel-loader?presets=es2015'
 					},
 					postcss: [
 						autoprefixer({browsers:['> 1%', 'last 2 versions', 'Firefox ESR']}),
@@ -75,7 +75,7 @@ let config = {
 				test: /\.js$/,
 				loader: 'babel-loader',
 				options: {
-					presets: ['es2015']
+					presets: ['es2015'],
 				},
 				include: __dirname + '\\src',
 			},

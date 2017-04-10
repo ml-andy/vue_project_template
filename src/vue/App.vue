@@ -10,10 +10,8 @@
 
 </template>
 
-<script lang="es6">
+<script>
 const Loading = require('../vue/component/Loading.vue');
-// console.log(Vuex.mapState)
-// import { mapState } from 'Vuex'
 
 export default {
     name: 'app',
@@ -22,26 +20,28 @@ export default {
             // loadingShow:true,
         }
     },
-    computed: Vuex.mapState({
-        loadingShow: state => state.loadingShow,
-    }),
+    computed: {
+      ...Vuex.mapState({
+          loadingShow: state => state.loadingShow,
+      }),
+
+    },
     mounted(){
-			// console.log(this.$store.state.loadingShow);
-      // console.log(state.loadingShow);
       // console.log(this.loadingShow);
 
 			$(window).load(()=>{
-				// this.loadingShow = false;
+				// this.changeLoading();
 			});
 			
     },
 		methods:{
-				tracker_pg(v){
-					tracker_pg(v);
-				},
-				tracker_btn(v){
-					tracker_btn(v);
-				},
+      // ...Vuex.mapActions(['changeLoading']),
+      tracker_pg(v){
+        tracker_pg(v);
+      },
+      tracker_btn(v){
+        tracker_btn(v);
+      },
     },
     components:{
       Loading

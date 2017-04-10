@@ -1,4 +1,5 @@
 require('../index.pug');
+require('es6-promise').polyfill();
 const store = require('../js/store.js');
 const App = require('../vue/App.vue');
 

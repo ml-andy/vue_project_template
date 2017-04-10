@@ -8,7 +8,7 @@ transition(name="fade",mode="out-in")
     span Loading...
 </template>
 
-<script lang="es6">
+<script>
 
 export default {
     name: 'Loading',
@@ -17,31 +17,29 @@ export default {
             // loadingShow:true,
         }
     },
-    computed: Vuex.mapState({
-        loadingShow: state => state.loadingShow,
-        testAddOthercomputed: ()=> true,
-    }),
+    computed: {
+      ...Vuex.mapState({
+          loadingShow: state => state.loadingShow
+      }),
+      // testAddOthercomputed:()=>{
+      //   return 'testAddOthercomputed'
+      // }
+    },
     mounted(){
       
 			$(window).load(()=>{
-        this.change();
-        this.goconsole();
+        this.changeLoading();
+        // this.goconsole();
+        // console.log(this.testAddOthercomputed);
 			});
 			
     },
-    // methods:Vuex.mapActions({
-    //   change:'changeLoading',
-    //   goalert:()=>{
-    //     alert('456');
-    //   },
-    // }),
 		methods:{
-      goconsole(){
-        console.log('456');
-      },
-      change(){
-        this.$store.dispatch('changeLoading')
-      }
+      ...Vuex.mapActions(['changeLoading']),
+      // goconsole(){
+      //   console.log('456');
+      // },
+      
     },
     components:{
       
