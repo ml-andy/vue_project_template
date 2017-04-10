@@ -6,12 +6,18 @@
 #app
 	Loading
 	
+	.menu
+		router-link(to="/foo")
+			|Go to Foo
+		router-link(to="/bar")
+			|Go to Bar
 	.wrapper
+			router-view
 
 </template>
 
 <script>
-const Loading = require('../vue/component/Loading.vue');
+const Loading = require('../vue/component/Loading.vue')
 
 export default {
     name: 'app',
