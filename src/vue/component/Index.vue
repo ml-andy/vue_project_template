@@ -4,7 +4,8 @@
 
 <template lang="pug">
 .main
-  |this is index!! id:{{ $route.params.id }}
+  //- |this is index!! id:{{ $route.params.id }}
+  |this is index!!
 </template>
 
 <script>
@@ -20,7 +21,7 @@ export default {
       
     },
     mounted(){
-      console.log('index show')
+      
     },
 		methods:{
       

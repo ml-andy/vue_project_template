@@ -7,12 +7,12 @@
 	Loading
 	
 	.menu
-		router-link(to="/foo")
-			|Go to Foo
-		router-link(to="/bar")
-			|Go to Bar
+		router-link(to="/000001")
+			|Go to 000001
+		router-link(to="/000002")
+			|Go to 000002
 	.wrapper
-			router-view
+		router-view
 
 </template>
 
